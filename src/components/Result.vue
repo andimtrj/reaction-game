@@ -1,7 +1,7 @@
 <template>
     <p>Your reaction time: {{ showScore }}ms </p>
     <h3 v-if="showFast">Kenceng banget ngab! 🔥 </h3>
-    <h3>Yah lamban amat! 💩</h3>
+    <h3 v-else>Yah lamban amat! 💩</h3>
 </template>
 
 <script>
@@ -11,16 +11,15 @@ export default {
     data(){
         return{
             showFast: false,
-            showSlow: false
         }
+    },
+    mounted(){
+        this.toggleFast();
     },
     methods: {
         toggleFast() {
             if(this.showScore <= 500){
                 this.showFast = true
-            }
-            else{
-                this.showSlow = true
             }
         }
     }
@@ -29,6 +28,10 @@ export default {
 
 <style scope>
 p {
+    color: #DDDDDD;
+}
+
+h3 {
     color: #DDDDDD;
 }
 

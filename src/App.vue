@@ -50,4 +50,20 @@ export default {
 h1 {
   color: #eeeeee;
 }
+
+button{
+  padding: 10px 30px 10px 30px;
+  border: 2px solid #DDDDDD;
+  border-radius: 4px;
+  background: none;
+  color: #DDDDDD;
+  transition: transform 0.3s ease;
+}
+
+button:hover{
+  background: #76885B;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 </style>
